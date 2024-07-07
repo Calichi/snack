@@ -54,6 +54,7 @@ ul
     grid-area: 2/1/5/3;
     border: outset 1px red;
     width: 12rem;
+    user-select: contain;
 }
 
 .product .count-background

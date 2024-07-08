@@ -42,10 +42,6 @@ ul
     gap: 20px;
 }
 
-.product:not(:hover) {
-    transform: scale(0.8);
-}
-
 .product
 {
     display: grid;
@@ -56,13 +52,27 @@ ul
     transition: transform 0.3s ease;
 }
 
+input:checked + .product {
+    transform: scale(0.7);
+}
 
 .product .image
 {
     grid-area: 2/1/5/3;
-    border: outset 1px red;
     width: 14rem;
     user-select: contain;
+}
+
+.product input {
+    appearance: none;
+    grid-area: 2/1/5/3;
+    margin:0;
+    border: solid 1px #aaa;
+}
+
+.product input:checked {
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
 }
 
 .product .count-background

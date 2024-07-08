@@ -165,10 +165,12 @@ decreaseButton.addEventListener('click', (event) => {
 
 // PRODUCT SELECTION
 
-document.querySelectorAll(".order .products .product .image")
+document.querySelectorAll('input[name="product"]')
 .forEach(element => {
-    element.addEventListener('click', (event) => {
-        selectedProductId = event.target.getAttribute('id');
+    element.addEventListener('change', (event) => {
+        let radio = event.target;
+        if(radio.checked)
+            selectedProductId = radio.value;
     });
 });
 

@@ -7,12 +7,13 @@ let selectedProductId = "";
 let increaseButton = document.getElementById('increase');
 let decreaseButton = document.getElementById('decrease');
 let orderTable = document.querySelector('.preview .table .content');
+let orderTableTotal = document.querySelector('.preview .table .total');
 
 
 // PRODUCT ORDER DATA
 
-let products = {
-    apple: {
+let products = [
+    {
         id: 'apple',
         count: 0,
         price: 60,
@@ -21,7 +22,7 @@ let products = {
             plural: 'Manzanas preparadas'
         }
     },
-    gummy: {
+    {
         id: 'gummy',
         count: 0,
         price: 20,
@@ -30,7 +31,7 @@ let products = {
             plural: 'Bolsitas de gomitas'
         }
     }
-}
+]
 
 //PRODUCT VISUAL MANAGEMENT
 
@@ -40,7 +41,8 @@ function getProductVisualComponent(className)
 }
 
 function getSelectedProduct(){
-    return products[selectedProductId]
+    return products.find(product => product.id == selectedProductId)
+    //return products[selectedProductId]
 }
 
 function getProductVisualCount(){
@@ -102,12 +104,24 @@ function onChangedOrder(product) {
 
     if (existsOrderElement && !thereAreProducts) {
         orderElement.remove();
-        return;
     } else if (existsOrderElement && thereAreProducts) {
         updateOrderElement(product);
     } else if (!existsOrderElement && thereAreProducts) {
+        orderTableTotal.textContent = `$${getComputedTotal()}`;
         orderTable.appendChild(newOrderElement(product));
     }
+
+    orderTableTotal.textContent = `$${getComputedTotal()}`;
+}
+
+// COMPUTE ORDER TOTAL
+
+function getComputedTotal() {
+    let total = 0;
+    products.forEach(product => {
+        total += product.count * product.price;
+    });
+    return total;
 }
 
 // PRODUCT QUANTITY INCREMENT AND DECREMENT SYSTEM

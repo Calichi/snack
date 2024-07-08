@@ -35,6 +35,7 @@ ul
     padding: 30px;
     background-color: #f0f0f0;
     border-radius: 1rem;
+    margin: 0;
     box-shadow: inset 0 0 3px #ccc;
 }
 
@@ -121,4 +122,46 @@ ul
 {
     margin-top: 10px;
     align-self: center;
+}
+
+/* PREVIEW */
+
+.preview
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 3px #ccc;
+}
+
+.preview .table
+{
+    border-collapse: collapse;
+}
+
+.preview .table th
+{
+    padding-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+.preview .table td, .preview .table tfoot th
+{
+    padding: 0 10px;
+    padding-bottom: 4px;
+    padding-top: 12px;
+}
+
+.preview .table td
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.preview .table tfoot th
+{
+    text-align: end;
 }

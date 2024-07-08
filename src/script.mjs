@@ -185,7 +185,7 @@ function getOrder() {
     });
     if(order.endsWith(", "))
     {
-        order = order.substring(0, order.length - 3) + ".";
+        order = order.substring(0, order.length - 2) + ".";
     }
     
     return order;

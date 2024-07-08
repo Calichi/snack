@@ -6,6 +6,7 @@ let selectedProductId = "";
 
 let increaseButton = document.getElementById('increase');
 let decreaseButton = document.getElementById('decrease');
+let sendButton = document.getElementById('send')
 let orderTable = document.querySelector('.preview .table .content');
 let orderTableTotal = document.querySelector('.preview .table .total');
 
@@ -170,3 +171,26 @@ document.querySelectorAll(".order .products .product .image")
         selectedProductId = event.target.getAttribute('id');
     });
 });
+
+// SEND ORDER
+
+function getOrder() {
+    let order = "";
+    products.forEach(product => {
+        if(product.count > 0) {
+            order += `${product.count} `;
+            order += product.count == 1 ? product.name.singular : product.name.plural;
+            order += "\n";
+        }
+    });
+    return order;
+}
+
+function sendOrder() {
+    let phone = '+528991902648';
+    let message = getOrder();
+    let whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
+    window.open(whatsappUrl, '_blank')
+}
+
+sendButton.addEventListener('click', sendOrder);

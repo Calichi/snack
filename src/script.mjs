@@ -180,9 +180,14 @@ function getOrder() {
         if(product.count > 0) {
             order += `${product.count} `;
             order += product.count == 1 ? product.name.singular : product.name.plural;
-            order += "\n";
+            order += ", ";
         }
     });
+    if(order.endsWith(", "))
+    {
+        order = order.substring(0, order.length - 3) + ".";
+    }
+    
     return order;
 }
 

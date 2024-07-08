@@ -28,16 +28,18 @@ ul
 {
     display: flex;
     justify-content: start;
-    max-width: 12rem;
+    width: 14rem;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    padding: 30px;
+    padding: 0 20px;
+    padding-top: 10px;
+    padding-bottom: 42px;
     background-color: #f0f0f0;
     border-radius: 1rem;
-    margin: 0;
     box-shadow: inset 0 0 3px #ccc;
     margin: 0 auto;
+    gap: 20px;
 }
 
 .product
@@ -46,8 +48,7 @@ ul
     grid-template-columns: auto 10% 10%;
     grid-template-rows: 10% 10% auto auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 0.8rem;
-    margin-right: 28px;
+    font-size: 0.9em;
 }
 
 
@@ -55,7 +56,7 @@ ul
 {
     grid-area: 2/1/5/3;
     border: outset 1px red;
-    width: 12rem;
+    width: 14rem;
     user-select: contain;
 }
 
@@ -91,8 +92,9 @@ ul
 .product .name
 {
     grid-area: 4/1/5/3;
-    place-self: center;
+    align-self: center;
     z-index: 1;
+    margin-left: 0.5em;
 }
 
 .product .price
@@ -100,7 +102,7 @@ ul
     grid-area: 4/1/5/3;
     align-self: center;
     justify-self: end;
-    margin-right: 5%;
+    margin-right: 0.5em;
     z-index: 1;
 }
 
@@ -110,8 +112,9 @@ ul
 {
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    width: 2.5em;
-    height: 2.5em;
+    font-size: 2rem;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     border: 0;
     box-shadow: 0 0 4px 1px #ccc;
@@ -177,4 +180,31 @@ main > .control button
 {
     display: block;
     margin: 0 auto;
+}
+
+#send
+{
+    font-size: 1.2rem;
+    padding: 8px 24px;
+    background-color: #f0f0f0;
+    border-radius: 1.2rem;
+    border: 0;
+    color: #444;
+    filter: drop-shadow(0 0 3px #ccc);
+}
+
+/* Define la animación */
+@keyframes miAnimacion {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+button
+{
+    transition: transform 0.3s ease;
+}
+
+button:active {
+    animation: miAnimacion 0.5s infinite;
 }

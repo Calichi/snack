@@ -150,6 +150,7 @@ increaseButton.addEventListener('click', (event) => {
     }
     getProductVisualCount().textContent = increment(product);
     onChangedOrder(product);
+    hideToolTip('add');
 })
 
 decreaseButton.addEventListener('click', (event) => {
@@ -161,6 +162,7 @@ decreaseButton.addEventListener('click', (event) => {
         visualCount.style.display = 'none';
         getProductVisualCountBackground().style.display = 'none';
     }
+    hideToolTip('add');
 })
 
 // PRODUCT SELECTION
@@ -169,8 +171,11 @@ document.querySelectorAll('input[name="product"]')
 .forEach(element => {
     element.addEventListener('change', (event) => {
         let radio = event.target;
-        if(radio.checked)
+        if(radio.checked) {
             selectedProductId = radio.value;
+            hideToolTip('touch');
+            showToolTip('add');
+        }
     });
 });
 
@@ -201,3 +206,26 @@ function sendOrder() {
 }
 
 sendButton.addEventListener('click', sendOrder);
+
+// TOOLTIP PRODUCTS
+let productsElement = document.querySelector('.products');
+let isActive = {
+    slide: true, touch: true, add: true
+}
+
+function hideToolTip(name){
+    let toolTip = document.getElementById(`tt-${name}`);
+    toolTip.style.display = 'none';
+    isActive[name] = false;
+}
+
+function showToolTip(name){
+    if(!isActive[name]) return;
+    let toolTip = document.getElementById(`tt-${name}`);
+    toolTip.style.display = 'inline';
+}
+
+productsElement.addEventListener('scroll', (event) => {
+    hideToolTip('slide');
+    showToolTip('touch');
+});

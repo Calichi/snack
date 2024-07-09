@@ -214,6 +214,7 @@ let isActive = {
 }
 
 function hideToolTip(name){
+    if(!isActive[name]) return;
     let toolTip = document.getElementById(`tt-${name}`);
     toolTip.style.display = 'none';
     isActive[name] = false;

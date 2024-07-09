@@ -36,8 +36,12 @@ ul
 
 .tooltip
 {
-    font-size: 0.8rem;
-    background-color: #ffc;
+    font-size: 1rem;
+    background-color: #8f85;
+    color: #080;
+    text-shadow: 0 0 3px #cfc;
+    box-shadow: inset 0 0 2px #0f05;
+    backdrop-filter: blur(2px);
     padding: 4px 8px;
     border-radius: 1em;
     height: fit-content;

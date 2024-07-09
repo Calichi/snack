@@ -37,9 +37,9 @@ ul
 .tooltip
 {
     font-size: 1rem;
-    background-color: #8f85;
-    color: #080;
-    text-shadow: 0 0 3px #cfc;
+    background-color: #0005;
+    color: #cfc;
+    text-shadow: 0 0 3px #0f0;
     box-shadow: inset 0 0 2px #0f05;
     backdrop-filter: blur(2px);
     padding: 4px 8px;

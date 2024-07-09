@@ -25,6 +25,7 @@ body
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 25px;
 }
 
 ul
@@ -48,7 +49,7 @@ ul
     align-self: top;
     text-align: center;
     justify-self: center;
-    z-index: 999;
+    max-width: 60vw;
 }
 
 #tt-slide
@@ -207,14 +208,12 @@ input:checked + .product {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
     margin-top: 30px;
     padding: 15px;
     border-radius: 1rem;
     box-shadow: inset 0 0 3px #ccc;
     background-color: #f0f0f06b;
     backdrop-filter: blur(2px);
-    width:fit-content;
 }
 
 .preview .table

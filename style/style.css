@@ -1,6 +1,19 @@
+@font-face {
+    font-family: 'Poppins M';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins B';
+    src: url('../fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
 :root
 {
     font-size: 12px;
+    font-family: 'Poppins M';
+    color: #ff0000;
+    text-shadow: 0 0 0.2rem #ffcccc;
 }
 
 body
@@ -9,7 +22,7 @@ body
     flex-direction: column;
     align-items: center;
     background-image: url(../img/back.webp);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
 }
@@ -52,7 +65,6 @@ ul
     display: grid;
     grid-template-columns: auto 10% 10%;
     grid-template-rows: 10% 10% auto auto;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 0.9em;
     transition: transform 0.3s ease;
 }
@@ -132,6 +144,7 @@ input:checked + .product {
 {
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     font-size: 2rem;
     width: 1.5em;
     height: 1.5em;
@@ -170,6 +183,7 @@ input:checked + .product {
 {
     padding-bottom: 6px;
     font-size: 1.2rem;
+    font-family: 'Poppins B';
 }
 
 .preview .table td, .preview .table tfoot th
@@ -207,7 +221,6 @@ main > .control button
     padding: 8px 24px;
     border-radius: 1.2rem;
     border: 0;
-    color: #444;
 }
 
 /* Define la animación */
@@ -224,6 +237,9 @@ button
     backdrop-filter: blur(2px);
     filter: drop-shadow(0 0 3px #ccc);
     user-select: none;
+    font-family: 'Poppins B';
+    color: #880;
+    text-shadow: 0 0 0.2rem #ffc;
 }
 
 button:active {

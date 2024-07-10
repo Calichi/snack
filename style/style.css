@@ -119,6 +119,7 @@ ul
 }
 
 .product input {
+    -webkit-appearance: radio;
     grid-area: 2/1/5/3;
     margin:0;
     border: solid 1px #aaa;

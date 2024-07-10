@@ -119,10 +119,11 @@ ul
 }
 
 .product input {
-    -webkit-appearance: radio;
+    appearance: none;
     grid-area: 2/1/5/3;
     margin:0;
     border: solid 1px #aaa;
+    background-color: blue;
 }
 
 .product input:checked {

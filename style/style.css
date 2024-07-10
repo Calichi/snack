@@ -121,6 +121,8 @@ ul
 .product input {
     appearance: none;
     grid-area: 2/1/5/3;
+    width: 100%;
+    height: 100%;
     margin:0;
     border: solid 1px #aaa;
     background-color: blue;

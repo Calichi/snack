@@ -107,9 +107,9 @@ ul
     scroll-snap-align: center;
 }
 
-input:checked + .product {
+/* input:checked + .product {
     transform: scale(0.7);
-}
+} */
 
 .product .image
 {
@@ -119,7 +119,7 @@ input:checked + .product {
 }
 
 .product input {
-    appearance: none;
+    -webkit-appearance: none;
     grid-area: 2/1/5/3;
     margin:0;
     border: solid 1px #aaa;

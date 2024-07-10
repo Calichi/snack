@@ -167,10 +167,27 @@ decreaseButton.addEventListener('click', (event) => {
 
 // PRODUCT SELECTION
 
-document.querySelectorAll('input[name="product"]')
+// document.querySelectorAll('input[name="product"]')
+// .forEach(element => {
+//     element.addEventListener('change', (event) => {
+//         let radio = event.target;
+//         if(radio.checked) {
+//             selectedProductId = radio.value;
+//             hideToolTip('touch');
+//             showToolTip('add');
+//         }
+//     });
+// });
+
+document.querySelectorAll('.product .image')
 .forEach(element => {
-    element.addEventListener('change', (event) => {
-        let radio = event.target;
+    element.addEventListener('click', (event) => {
+        let image = event.target;
+        let productName = image.id.split('-')[1];
+        let radio = document.querySelector(`input[value="${productName}"]`)
+
+        radio.checked = !image.checked;
+
         if(radio.checked) {
             selectedProductId = radio.value;
             hideToolTip('touch');

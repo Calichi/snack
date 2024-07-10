@@ -127,13 +127,14 @@ input:checked + .product {
 
 .product input:checked {
     border: 1px solid #00ff00;
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow: 0 0 20px #00ff00;
 }
 
 .product .count-background
 {
     grid-area: 1/2/3/4;
-    background-color: #5656563c;
+    background-color: #8808;
+    filter: drop-shadow(0 0 2px #ff0);
     margin: 15%;
     border-radius: 50%;
     backdrop-filter: blur(2px);
@@ -148,6 +149,8 @@ input:checked + .product {
     padding: 0;
     z-index: 1;
     display: none;
+    color: #ffa;
+    text-shadow: 0 0 3px #ff0;
 }
 
 .product .price-background
@@ -276,11 +279,11 @@ button
     background-color: #f0f0f08f;
     transition: transform 0.3s ease;
     backdrop-filter: blur(2px);
-    filter: drop-shadow(0 0 3px #ccc);
+    filter: drop-shadow(3px 3px 3px #660);
     user-select: none;
     font-family: 'Poppins B';
-    color: #880;
-    text-shadow: 0 0 0.2rem #ffc;
+    color: #ff0;
+    text-shadow: 0 0 0.2rem #660;
 }
 
 button:active {
@@ -293,8 +296,4 @@ button:active {
 {
     margin-top: 15px;
     text-align: start;
-}
-
-.comment {
-    margin-left: 10px;
 }

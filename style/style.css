@@ -82,7 +82,7 @@ ul
     display: flex;
     justify-content: start;
     gap: 20px;
-    width: 14rem;
+    width: 80dvw;
     overflow-x: scroll;
     scrollbar-width: none;
     padding: 0 20px;
@@ -116,7 +116,7 @@ ul
 .product .image
 {
     grid-area: 2/1/5/3;
-    width: 14rem;
+    width: 80dvw;
     user-select: contain;
 }
 

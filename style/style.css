@@ -278,10 +278,10 @@ main > .control button
 
 button
 {
-    background-color: #f0f0f08f;
+    background-color: #eee;
     transition: transform 0.3s ease;
-    backdrop-filter: blur(2px);
-    filter: drop-shadow(3px 3px 3px #660);
+    /* backdrop-filter: blur(2px); */
+    filter: drop-shadow(0px 0px 3px #660);
     user-select: none;
     font-family: 'Poppins B';
     color: #ff0;

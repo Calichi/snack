@@ -32,7 +32,33 @@ let products = [
             plural: 'Bolsitas de gomitas'
         }
     }
-]
+];
+
+// CREATE PRODUCT VIEW
+
+function showProduct(product)
+{
+    let productsElement = document.querySelector('.products');
+    let productElement = document.createElement('li');
+
+    productElement.innerHTML = 
+    `
+    <article id="product-${product.id}" class="product">
+        <img id="image-${product.id}" src="img/${product.id}.webp" class="image" width="300"/>
+        <figure alt="Fondo gráfico de la cantidad del producto" class="count-background"></figure>
+        <label class="count">${product.count}</label>
+        <figure alt="Fondo gráfico del precio producto" class="price-background"></figure>
+        <label class="name">${product.name.singular}</label>
+        <label class="price">$${product.price}</label>
+        <input type="radio" name="product" value="${product.id}"/>
+    </article>
+    `
+    productsElement.appendChild(productElement);
+}
+
+products.forEach(product => {
+    showProduct(product);
+});
 
 //PRODUCT VISUAL MANAGEMENT
 

@@ -105,6 +105,8 @@ ul
     font-size: 0.9em;
     transition: transform 0.3s ease;
     scroll-snap-align: center;
+    color: #faa;
+    text-shadow: 0 0 3px #f00;
 }
 
 /* input:checked + .product {
@@ -166,6 +168,8 @@ ul
     backdrop-filter: blur(2px);
     margin: 1px;
     padding: 10px;
+    background-color: #8008;
+    filter: drop-shadow(0 0 2px #844);
 }
 
 .product .name

@@ -17,7 +17,7 @@ let products = [
     {
         id: 'apple',
         count: 0,
-        price: 60,
+        price: 50,
         name: {
             singular: 'Manzana preparada',
             plural: 'Manzanas preparadas'
@@ -26,7 +26,7 @@ let products = [
     {
         id: 'gummy',
         count: 0,
-        price: 20,
+        price: 15,
         name: {
             singular: 'Bolsita de gomitas',
             plural: 'Bolsitas de gomitas'

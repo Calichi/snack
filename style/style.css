@@ -90,8 +90,7 @@ ul
     border-radius: 1rem;
     box-shadow: inset 0 0 3px #f00;
     margin: 0 auto;
-    background-color: #ff88886f;
-    backdrop-filter: blur(2px);
+    background-color: #ff8888;
     scroll-snap-type: x mandatory;
     grid-area: products;
 }
@@ -128,13 +127,13 @@ ul
     height: 100%;
     margin:0;
     border-radius: 0;
-    border: solid 1px #aaa;
+    /* border: 10px outset #aaa; */
     z-index: -1;
 }
 
-.product input:checked {
-    border: 1px solid #f66;
-    box-shadow: 0 0 10px 4px #f00;
+.product input[type="radio"]:checked + .image {
+    border: 3px solid #f00;
+    /* box-shadow: 0 0 10px 4px #000; */
 }
 
 .product .count-background

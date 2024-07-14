@@ -15,6 +15,15 @@ let orderTableTotal = document.querySelector('.preview .table .total');
 
 let products = [
     {
+        id: 'combo2',
+        count: 0,
+        price: 90,
+        name: {
+            singular: 'Combo x2',
+            plural: 'Combos x2'
+        }
+    },
+    {
         id: 'apple',
         count: 0,
         price: 50,
